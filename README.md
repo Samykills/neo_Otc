@@ -34,6 +34,6 @@ nos-otc fills in the gap to establish that trust and provide an escrow facility 
 
 ## Installation
 To run your dApp, execute:
-1. 'cd nos-otc'
+1. 'cd nos_otc'
 2. 'npm start' or 'yarn start'
 3. Open the nOS client at nos://localhost:1234
