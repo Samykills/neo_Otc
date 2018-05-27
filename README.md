@@ -1,88 +1,39 @@
 <p align="center">
-  <img src="./logo.png" width="150px" /> 
+  <img src="./logo.png" width="150px" />
 </p>
 
-<h1 align="center">dapp-starter-kit</h1>
+<h1 align="center">nos-otc</h1>
 
 <p align="center">
-  This is a starter-kit for creating a <strong>dApp</strong> on the <strong>nOS</strong> platform
+  nos-otc is a <strong>nos dapp</strong> to facilitate a OTC like transaction on nos platform. A transaction requring asset transfer between two trading parties can be facilitated over this dapp.
 </p>
 
 <p align="center">
-  <a href="https://github.com/nos/dapp-starter-kit/releases">
-    <img src="https://img.shields.io/github/tag/nos/dapp-starter-kit.svg?style=flat">
+  <a href='https://www.npmjs.com/package/@nosplatform/create-nos-dapp'>
+    <img src='https://badge.fury.io/js/%40nosplatform%2Fcreate-nos-dapp.svg'>
   </a>
   <a href='https://github.com/prettier/prettier'>
     <img src='https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat'>
   </a>
 </p>
 
-## Getting started
-To get started, go to our [Getting Started](./docs/gettingStarted.md) guide. Afterwards you can check out the nOS [API documentation](https://github.com/nos/client/blob/master/docs/api.md)
-
 ## Purpose
-The goal of this project is to provide a quickstart for creating nOS dApps with React and various dependencies already installed and configured.
+Lot of time we see that NEP-5 tokens are released but could not be traded. This is because either they are locked or not listed on any of the exchanges.
 
-In this repo you can find NEO specific tooling:
-* nOS functions exposed in a store
-* neon-js, providing extra NEO functionality
+1. If they are locked then we cannot do much but to wait for the contract/company to unlock it before they can be used.
+2. However if they are unlocked then we are under the mercy of exchanges to list them and then on begin trading.
 
-Also general frameworks and tooling:
-* React, our framework of choice
-* JSS, CSS in JSS
-* Jest, a testing framework
-* Babel and Parcel, transpiling and compiling
-* Prettier and ESLint, kickass linting support
+This is also a problem where lot of new start-ups don’t want to on board on NEP-5 tokens because they fear listing and negotiations with limited exchanges.
+Even decentralized exchanges such as switcheo are controlled when it comes to listing.
 
-Some plugins:
-* vendor prefixing, camelCase and global styling JSS plugins
-* env and React Babel presets
-* babel-polyfill
-* React and Prettier ESLint plugins
+Similar was the case of APEX (CPX) tokens when they were visible in the wallets but could not be traded because of the lack of listing on an exchange. We all know the infamous story about it getting listed on switcheo before lbank when lbank was suppose to be the strategic launch platform.
 
-And finally some testing and security:
-* Circle CI, automated builds/testing (coming soon)
-* Coveralls, code coverage (coming soon)
-* Deepscan and Better Code Hub, code analysis (coming soon)
-* Renovate and Gemnasium, dependency monitoring (coming soon)
+But, even before APEX was listed it was transferable. No one could trade because of the lack of trusted buyers and sellers (Which an exchange provides). Many telegram groups and pools have members which can trust each other and contact. They can exchange tokens only if they knew the exchange of assets could be escrowed to ensure transaction success. The escrow will help develop trust.
 
-## Setup
-```bash
-$ git clone https://github.com/nos/dapp-starter-kit.git my-dapp
-$ cd my-dapp
-$ yarn
-$ yarn start
-```
+nos-otc fills in the gap to establish that trust and provide an escrow facility which can last as long as the buyer and sellers agree. The escrow facility will expire if the participating parties do not honour the asset exchange. The expiry time is pre agreed while creating the otc trade.
 
-Change `README.md` and `package.json` to fit your project needs. Delete `LICENSE` if not applicable.
-
-## Testing
-Use `yarn test:local` or `npm run test:local` to run all tests locally. The `test` command is reserved for CI builds.
-
-## Document structure
-```
-react-stack-boilerplate
-├── src
-│   ├── __helpers__
-│   ├── __mocks__
-│   ├── assets
-│   ├── components
-│   │   └── __tests__
-│   │       └── __snapshots__
-│   ├── nos
-│   └── views
-│       └── __tests__
-│           └── __snapshots__
-├── .babelrc
-├── .eslintrc
-├── .gitignore
-├── CHANGELOG.md
-├── jest.config.js
-├── jest.setup.js
-├── package.json
-├── README.md
-└── yarn.lock
-```
-
-## Known issues
- * Build assets to dedicated subdirectory https://github.com/parcel-bundler/parcel/issues/233
+## Installation
+To run your dApp, execute:
+1. 'cd nos-otc'
+2. 'npm start' or 'yarn start'
+3. Open the nOS client at nos://localhost:1234
